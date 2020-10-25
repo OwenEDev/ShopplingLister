@@ -1,16 +1,22 @@
 import tkinter as tk
+import database
 
 
+#create table
+database.c.execute("CREATE TABLE IF NOT EXISTS recipes(dish TEXT, ingredients TEXT)")
 #dictionary containing recipes
+
 recipes = {
-    "Butternut Squash Risotto": "onion \ngarlic \nrisotto rice \nsoup stock \nbutternut squash \nparmasan\n",
+    "Butternut Squash Risotto": "onion \ngarlic \nrisotto rice \nsoup stock \nbutternut squash \nparmesan\n",
     "Pizza": "pepper \nonion \npeeled plum tomatoes \nmozarella \ncheddar \nmushrooms \npizza base\n",
     "Thai Curry": "shallots \ncorriander \ncoconut milk \ncourgette \ncucumber \npepper \ntomato \ncarrots\n",
     "Butternut Squash Tacos": "butternut squash \ntortillas \ncashew nuts \nkale \ncorriander \nparsley \nspring onions \ntamatillo salsa \npink pickled onion \npumpkin seeds \nhot sauce\n",
     "Pepper and Sweetcorn Soup": "peeled plum tomatoes \nsweetcorn \npeppers \nsoup stock \nred onion\n",
     "Pepper and Courgette Pasta": "onion \ngarlic \npeppers \ntomato puree \npeeled plum tomatoes \ncourgettes\n",
+    
 
 }
+
 
 #converting recipe dictionary to a list
 values = recipes.keys()
